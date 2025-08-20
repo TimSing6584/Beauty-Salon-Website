@@ -1,0 +1,231 @@
+:root{
+    --background-color: #3b3437;
+    --nav-bar-color: #4c4348;
+    --nav-component-color: #f3ebe6;
+    --nav-highlight-box: #d8c4c4;
+    --nav-hover-text-color: #2f2a2a;
+    --heading-font-size: 3rem;
+    --subheading-font-size: 2rem;
+    --text-font-size: 1.4rem;
+    --subheading-color: #f27e57;
+    --text-line-height: 1.6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #ede0d9;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    background-color: var(--background-color); /*#3b3437*/
+    overflow-x: hidden;
+}
+/* Nav bar section */
+nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--nav-bar-color); /*#B39696*/
+    padding: 0 15px;
+    /* position: fixed; */
+}
+.nav-components a{
+    margin-right: 55px;
+    padding: 15px;
+    display: inline-block;
+    color: var(--nav-component-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.nav-components a:hover{
+    background-color: var(--nav-highlight-box);
+    color: var(--nav-hover-text-color);
+    transform: scale(1.05); /*transform does not work on inline block line <a> -> change display*/
+}
+.nav-image img{
+    max-height: 2rem;
+}
+
+/* Poster Section */
+.poster{
+    width: 100%;
+    height: auto;
+}
+main{
+    padding: 10px 30px;
+}
+/* About Us Section */
+#about-us{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.pria img, .garry img{
+    max-width: 15vw;
+    max-height: 30vh;
+    display: block;
+    margin-bottom: 10px;
+    /* justify-self: end; */
+}
+.pria, .garry{
+    width: 15vw;
+    line-height: 1.3;
+    justify-self: end;
+    overflow-wrap: break-word; /* break long words*/
+}
+h1{
+    font-size: var(--heading-font-size);
+}
+.about-info h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    font-size: var(--subheading-font-size);
+    color: var(--subheading-color);
+}
+p{
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+}
+.shop2{
+    grid-column: 2 / 4;
+    justify-self: center;
+}
+.shop1 img, .shop2 img{
+    width: 90%;
+    max-height: 60vh;
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.shop2{
+    text-align: center;
+    font-size: var(--text-font-size);
+    line-height: var(--text-line-height);
+    font-style: italic;
+}
+hr{
+    width: 100%;
+    margin: 50px auto;
+}
+
+/* Services section */
+#services{
+    width: 80%;
+    margin: 20vh auto;
+    background-color:  #4f4848; /*857f7f*/
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    line-height: var(--text-line-height);
+    padding: 20px;
+    border-radius: 12px;
+}
+.hair-image, .makeup-image, .client-image{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hair-services{
+    row-gap: 10px;;
+}
+.hair-services, .makeup-services, .nail-services{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hair-services h1, .makeup-services h1, .nail-services h1{
+    grid-column: 1 / 3;
+    align-self: center;
+    color: #FFE0B2;
+}
+.hair-services > *, .makeup-services > *, .nail-services > *{
+    justify-self: center;
+}
+.other-services{
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
+}
+.other-services h2{
+    color: var(--about-subheading-color)
+}
+.booking{
+    background-color: #8D6E63 ;
+    padding: 35px;
+}
+.button{
+    display: block;
+    margin: 30px auto;
+}
+.button:hover{
+    transform: scale(1.05);
+    filter: blur(0.4px);
+}
+button{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding: 8px;
+    background-color: #E8C170   ;
+    color: #2F2A2A;
+    border-radius: 12px;
+    border: 0px;
+    font-size: 1.1rem;
+    line-height: var(--text-line-height);
+    /*most browsers apply their own default styles to form
+    controls like <button>, and those styles often override inherited properties such as
+    line-height*/
+    font-style: italic;
+    font-weight: 600;
+
+}
+.tutorials-video{
+    margin: 30px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.tutorials-description{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 35px;
+}
+
+#contact{
+    display: flex;
+    height: 25vh;
+    background-color: rgb(225, 225, 204);
+    margin-top: 40px;
+    padding: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer-logo{
+    max-width: 7rem;
+    object-fit: contain;
+}
+.contact-right{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+.social-media{
+    margin: 30px;
+}
+.social-media img:hover{
+    transform: scale(1.05);
+    filter: blur(0.5px);
+    transition: filter 0.3s ease;
+}
+.contact-right h1{
+    color: #f27e57;
+}
