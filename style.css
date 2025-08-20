@@ -34,6 +34,8 @@ nav{
     background-color: var(--nav-bar-color); /*#B39696*/
     padding: 0 15px;
     position: fixed;
+    top: 0;       /* stick to very top */
+    left: 0;
 }
 .nav-components a{
     margin-right: 55px;
@@ -231,7 +233,7 @@ button{
 
 
 form{
-    margin: 30px auto;
+    margin: 100px auto;
     width: 50%;
     border-radius: 12px;
     background-color: white;
