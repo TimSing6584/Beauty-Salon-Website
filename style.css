@@ -191,11 +191,7 @@ button{
     margin: 30px 10px;
     display: flex;
     justify-content: space-around;
-}
-.tutorials-description{
-    display: flex;
-    justify-content: space-around;
-    padding-right: 35px;
+    text-align: center;
 }
 
 #contact{
@@ -271,4 +267,9 @@ input:required:valid {
 label{
     color: rgb(74, 71, 71);
     font-weight: 550;
+}
+.submit-booking{
+    background-color: #f27e57;
+    width: 80%;
+    margin: 20px auto 0 auto;
 }
